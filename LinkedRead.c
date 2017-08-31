@@ -29,10 +29,16 @@ int main(void)
 		newNode->data = readData;
 		newNode->next = NULL;
 		if (head == NULL)
+		{
 			head = newNode;
+			tail = newNode;
+		}
 		else
-			tail->next = newNode;
+		{
+			newNode->next = head;
+			head = newNode;
 
+		}
 		tail = newNode;
 
 	}
